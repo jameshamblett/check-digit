@@ -5,6 +5,8 @@ const ejs = require("ejs");
 const bodyParser = require("body-parser");
 const checkDigit = require("./modules/functions.js");
 
+
+const port = process.env.PORT || 8000;
 let message="";
 var response ="";
 
@@ -25,6 +27,6 @@ app.post("/", function(req,res){
   res.render("index", {data:response});
 });
 
-app.listen(process.env.PORT || 3000, function() {
-  console.log("Server started on port 3000");
+app.listen(port, function() {
+  console.log("Server started on port "+port);
 });
