@@ -1,0 +1,29 @@
+<footer>
+  <p class="mt-5 mb-3 text-muted">Copyright &copy; James Hamblett 2019</p>
+</footer>
+<script type="text/javascript">
+  $(document).ready(function() {
+    console.log(<%=JSON.stringify(data.valid)%>);
+    if(<%=JSON.stringify(data.valid)%> != null){
+      var message = <%-JSON.stringify(data.message)%>;
+      var valid = <%-JSON.stringify(data.valid)%>;
+      var title = "";
+      var type="";
+      if(valid === false){
+        title = "Uh-oh!";
+        type="error";
+      } else {
+        title = "Great!";
+        type="success";
+      }
+      Swal.fire(title, message, type);
+    }
+});
+  </script>
+
+
+
+
+  </body>
+
+  </html>
