@@ -12,6 +12,7 @@ const app = express();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
+app.get('/favicon.ico', (req, res) => res.status(204));
 
 app.get("/", function(req,res){
   res.render("index", {data:{message:"", valid:null}});
