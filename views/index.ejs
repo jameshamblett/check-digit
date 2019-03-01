@@ -9,6 +9,12 @@
   <button class="btn btn-primary btn-block mt-3 form-control" type="submit" name="button">Submit</button>
 </form>
 
+<form class="form-signin" action="/upload-csv" enctype="multipart/form-data" method="post">
+  <input type="file" name="file">
+  <button type="submit" class="btn btn-primary btn-block mt-3 form-control" name="upload">Upload</button>
+
+</form>
+
 
 
 <%- include("partials/footer.ejs") -%>
